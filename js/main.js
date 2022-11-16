@@ -1,5 +1,5 @@
-import { GET, POST, DELETE } from './api.js'
-import { q, c, createCard, uuidv4 } from './utils.js'
+import { GET, POST } from './api.js'
+import { q, createCard, uuidv4 } from './utils.js'
 
 const ul = q(".cards__list")
 const form = document.forms.pokemon;
