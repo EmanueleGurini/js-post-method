@@ -1,20 +1,8 @@
+import { DELETE } from "./api.js";
+
 const c = (el) => document.createElement(el);
 const q = (el) => document.querySelector(el);
 
-const GET = async (BASE_URL) => {
-	const res = await fetch(BASE_URL);
-	return await res.json();
-}
-
-const POST = async (BASE_URL, body) => {
-	return await fetch(BASE_URL, {
-		method: 'POST',
-		headers: {
-			'Content-Type': 'application/json'
-		},
-		body: JSON.stringify(body)
-	});
-}
 
 // API
 /**
@@ -30,4 +18,28 @@ function uuidv4() {
 	);
 }
 
-export { c, q, GET, POST, uuidv4 }
+
+const createCard = (url, parent, name, type, id) => {
+	const wrapperEl = c('li');
+	const cardEl = c("div")
+	const nameEl = c('p');
+	const typeEl = c('p');
+	const btn = c('button');
+
+	wrapperEl.className = "list__card"
+
+
+	nameEl.textContent = name
+	typeEl.textContent = type
+	btn.textContent = "Delete"
+
+	btn.addEventListener("click", () => {
+		DELETE(url, id)
+	})
+
+	cardEl.append(nameEl, typeEl, btn);
+	wrapperEl.append(cardEl);
+	parent.appendChild(wrapperEl);
+}
+
+export { c, q, uuidv4, createCard }
