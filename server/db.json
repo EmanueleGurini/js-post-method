@@ -1,11 +1,6 @@
 {
   "pokemon": [
     {
-      "id": 1,
-      "name": "Bulbasarur",
-      "type": "grass"
-    },
-    {
       "id": "ed94a8c3-cce3-4e7c-9fa1-913d10a0b3a2",
       "name": "pippo",
       "type": "ciao"

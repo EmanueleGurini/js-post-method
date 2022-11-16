@@ -35,6 +35,7 @@ const createCard = (url, parent, name, type, id) => {
 
 	btn.addEventListener("click", () => {
 		DELETE(url, id)
+			.then(() => location.reload())
 	})
 
 	cardEl.append(nameEl, typeEl, btn);
