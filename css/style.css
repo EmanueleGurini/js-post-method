@@ -1,7 +1,26 @@
+/*
+
+	1. GENERAL
+	2. FORM
+
+*/
+
 /* GENERAL */
 * {
   box-sizing: border-box;
   font-family: sans-serif;
   margin: 0;
   padding: 0;
+}
+
+/* FORM */
+
+.form {
+  align-items: center;
+  background-color: lightgray;
+  display: flex;
+  height: 400px;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
 }
